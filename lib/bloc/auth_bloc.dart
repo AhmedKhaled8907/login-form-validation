@@ -17,7 +17,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
               AuthFailure('The password can\'t be less than 6 characters.'));
         }
 
-        await Future.delayed(const Duration(seconds: 2), () {
+        await Future.delayed(const Duration(seconds: 1), () {
           return emit(AuthSuccess('$email-$password'));
         });
       } catch (e) {
