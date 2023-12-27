@@ -34,6 +34,7 @@ class HomePage extends StatelessWidget {
             child: CircularProgressIndicator(),
           );
         }
+
         return Scaffold(
           appBar: AppBar(
             backgroundColor: Colors.transparent,
@@ -43,7 +44,7 @@ class HomePage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                (state as AuthSuccess).uid,
+                (state is AuthSuccess) ? state.uid : 'No UID',
                 style: const TextStyle(
                   color: Colors.white,
                   fontSize: 24,
