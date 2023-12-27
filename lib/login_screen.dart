@@ -86,6 +86,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   const SizedBox(height: 20),
                   GradientButton(
+                    title: 'Sign in',
                     onPressed: () {
                       context.read<AuthBloc>().add(
                             AuthLoginRequested(
